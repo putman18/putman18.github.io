@@ -157,17 +157,42 @@
     <span>2026</span>
   </footer>
 
-  <div id="spotlight" style="
-    position: fixed; inset: 0; pointer-events: none; z-index: 9999;
-    background: radial-gradient(600px circle at -999px -999px,
-      rgba(139,92,246,0.07) 0%, transparent 70%);
-    transition: background 0.05s;
+  <div id="orb" style="
+    position: fixed; pointer-events: none; z-index: 9999;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(167,139,250,0.9) 0%, rgba(96,165,250,0.4) 60%, transparent 100%);
+    box-shadow: 0 0 20px 6px rgba(139,92,246,0.5);
+    transform: translate(-50%, -50%);
+    top: -100px; left: -100px;
+    transition: width 0.2s, height 0.2s, opacity 0.2s;
   "></div>
 
   <script>
-    const s = document.getElementById('spotlight');
-    document.addEventListener('mousemove', e => {
-      s.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(139,92,246,0.10) 0%, transparent 70%)`;
+    const orb = document.getElementById('orb');
+    let mx = -100, my = -100, ox = -100, oy = -100;
+
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+    function loop() {
+      ox += (mx - ox) * 0.1;
+      oy += (my - oy) * 0.1;
+      orb.style.left = ox + 'px';
+      orb.style.top  = oy + 'px';
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    document.querySelectorAll('a, .card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        orb.style.width  = '52px';
+        orb.style.height = '52px';
+        orb.style.opacity = '0.6';
+      });
+      el.addEventListener('mouseleave', () => {
+        orb.style.width  = '28px';
+        orb.style.height = '28px';
+        orb.style.opacity = '1';
+      });
     });
   </script>
 
