@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>putman18 — AI Developer</title>
+  <meta name="description" content="AI systems for regulated industries. RAG pipelines, autonomous trading bots, and voice AI. Built by putman18." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fallback if Tailwind CDN fails */
+    body { background: #09090b; color: #f4f4f5; font-family: system-ui, sans-serif; margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    .card { border: 1px solid #27272a; border-radius: 12px; padding: 2rem; display: block; transition: border-color 0.3s, transform 0.3s; }
+    .card:hover { border-color: #34d399; transform: scale(1.02); }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+    * { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+
+  <!-- Nav -->
+  <nav class="flex justify-between items-center px-8 py-8 max-w-6xl mx-auto">
+    <span class="text-zinc-400 text-sm tracking-widest uppercase">putman18</span>
+    <a href="mailto:putman18@gmail.com" class="text-zinc-400 text-sm hover:text-emerald-400 transition-colors duration-200">
+      putman18@gmail.com
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="px-8 pt-24 pb-40 max-w-6xl mx-auto">
+    <h1 class="text-6xl md:text-8xl font-black leading-none tracking-tight text-zinc-100 max-w-4xl">
+      AI moves fast.<br/>
+      <span class="text-zinc-500">Regulated industries<br/>can't afford not to.</span>
+    </h1>
+    <p class="mt-10 text-zinc-400 text-lg max-w-xl leading-relaxed">
+      I build AI systems that make high-stakes industries queryable, autonomous, and trustworthy — without the hallucinations.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="px-8 pb-40 max-w-6xl mx-auto">
+    <p class="text-zinc-600 text-xs tracking-widest uppercase mb-12">Selected work</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- RegulatoryRAG -->
+      <a href="https://regulatoryrag-4c8gwkjqtcnqq77da6cdio.streamlit.app"
+         target="_blank" rel="noopener"
+         class="card group block border border-zinc-800 rounded-xl p-8 hover:border-emerald-400 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex justify-between items-start mb-8">
+          <span class="text-xs text-zinc-600 tracking-widest uppercase">01</span>
+          <span class="text-xs text-emerald-400 border border-emerald-400/30 rounded px-2 py-1">Live demo</span>
+        </div>
+        <h2 class="text-2xl font-black text-zinc-100 mb-3">RegulatoryRAG</h2>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+          RAG pipeline that lets life sciences teams query any regulatory PDF in plain English — Claude answers from the document only, with page citations. (Research demo)
+        </p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Python</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Streamlit</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Claude Sonnet</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">TF-IDF RAG</span>
+        </div>
+        <div class="flex gap-4 text-xs text-zinc-600">
+          <a href="https://regulatoryrag-4c8gwkjqtcnqq77da6cdio.streamlit.app" target="_blank" class="hover:text-emerald-400 transition-colors">Live app →</a>
+          <a href="https://github.com/putman18/regulatoryrag" target="_blank" class="hover:text-emerald-400 transition-colors">GitHub →</a>
+        </div>
+      </a>
+
+      <!-- Stockbot -->
+      <a href="https://github.com/putman18/stockbot"
+         target="_blank" rel="noopener"
+         class="card group block border border-zinc-800 rounded-xl p-8 hover:border-emerald-400 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex justify-between items-start mb-8">
+          <span class="text-xs text-zinc-600 tracking-widest uppercase">02</span>
+          <span class="text-xs text-zinc-600 border border-zinc-800 rounded px-2 py-1">Deployed</span>
+        </div>
+        <h2 class="text-2xl font-black text-zinc-100 mb-3">Stockbot</h2>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+          Autonomous trading bot across 51 tickers — Claude Opus reasons about every signal before execution. Outperformed SPY benchmark in 6-month backtest.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Python</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Alpaca API</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Claude Opus</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">FastAPI</span>
+        </div>
+        <div class="flex gap-4 text-xs text-zinc-600">
+          <a href="https://github.com/putman18/stockbot" target="_blank" class="hover:text-emerald-400 transition-colors">GitHub →</a>
+        </div>
+      </a>
+
+      <!-- Voicebot -->
+      <a href="https://github.com/putman18/voicebot"
+         target="_blank" rel="noopener"
+         class="card group block border border-zinc-800 rounded-xl p-8 hover:border-emerald-400 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex justify-between items-start mb-8">
+          <span class="text-xs text-zinc-600 tracking-widest uppercase">03</span>
+          <span class="text-xs text-zinc-600 border border-zinc-800 rounded px-2 py-1">Deployed</span>
+        </div>
+        <h2 class="text-2xl font-black text-zinc-100 mb-3">Voicebot</h2>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+          AI receptionist deployed for a hospitality client — answers calls, recognises existing customers by phone, books appointments, and logs every interaction to a CRM.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Python</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Twilio</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">Claude Haiku</span>
+          <span class="text-xs bg-zinc-900 text-zinc-500 rounded px-2 py-1">FastAPI</span>
+        </div>
+        <div class="flex gap-4 text-xs text-zinc-600">
+          <a href="https://github.com/putman18/voicebot" target="_blank" class="hover:text-emerald-400 transition-colors">GitHub →</a>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="px-8 pb-32 max-w-6xl mx-auto border-t border-zinc-900 pt-20">
+    <p class="text-zinc-600 text-xs tracking-widest uppercase mb-8">Get in touch</p>
+    <a href="mailto:putman18@gmail.com"
+       class="text-4xl md:text-6xl font-black text-zinc-100 hover:text-emerald-400 transition-colors duration-300 block">
+      putman18@gmail.com
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-8 pb-12 max-w-6xl mx-auto flex justify-between items-center text-zinc-700 text-xs">
+    <span>putman18</span>
+    <span>2026</span>
+  </footer>
+
+</body>
+</html>
